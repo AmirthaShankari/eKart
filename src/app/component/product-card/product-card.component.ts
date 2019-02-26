@@ -31,11 +31,15 @@ export class ProductCardComponent implements OnInit {
     this.associateClassBinding();
   }
 
-  associateClassBinding(){
+  associateClassBinding(): void{
     this.productNameClass = {
       'name': true,
       'out-of-stock': !this.productDetail.inStock
     }
+  }
+
+  handleProductClick(productDetail: Product): void{
+    alert(JSON.stringify(productDetail));
   }
 
 }

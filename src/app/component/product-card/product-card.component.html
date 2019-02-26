@@ -1,4 +1,4 @@
-<div class="product" [class.out-of-stock] = "!productDetail.inStock">
+<div class="product" [class.out-of-stock] = "!productDetail.inStock" (click)="handleProductClick(productDetail)">
   <div class="poster">
     <img
       [src]="productDetail.imageUrl"

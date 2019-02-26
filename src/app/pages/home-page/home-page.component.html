@@ -1,4 +1,8 @@
 <div class="home-page-wrapper">
+  <div class="search-section">
+    <input type="text" name="searchProduct" [(ngModel)]="searchProduct" placeholder="Search Products..." />
+    <div class="search-result">Showing results for "{{searchProduct}}"</div>
+  </div>
   <div class="category-section">
     <div class="category-title">
       Women

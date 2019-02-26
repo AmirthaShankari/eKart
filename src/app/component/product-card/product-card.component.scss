@@ -3,7 +3,8 @@
 .product{
     width: 250px;
     height: 300px;
-    border: 1px solid $purple;
+    color: $purple;
+    border: 1px solid;
     margin-right: 20px;
     .poster{
         width: 130px;
@@ -19,6 +20,7 @@
     }
     .details{
         margin: 0 15px;
+        color: $purple;
         .brand{
             color: $grey;
             font-size: 12px;
@@ -26,10 +28,13 @@
         .name{
             font-size: 20px;
             font-weight: 400;
-            color: $purple;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
     }
+}
+.out-of-stock{
+    color: #cccccc;
+    text-decoration: "line-through"
 }

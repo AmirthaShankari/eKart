@@ -1,0 +1,23 @@
+@import '../../../variables';
+
+.header{
+  padding: 20px;
+  min-height: 40px;
+  background-color: $purple;
+  overflow: auto;
+  .logo {
+    width: 100px;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 10px 10px;
+    }
+    a {
+      color: #ffcb59;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  }
+}

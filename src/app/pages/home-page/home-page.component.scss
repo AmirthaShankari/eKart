@@ -1,0 +1,17 @@
+@import '../../../variables';
+
+.home-page-wrapper{
+    padding: 50px;
+}
+.category-section{
+    margin: 20px 0;
+    .category-title{
+        font-size: 30px;
+        font-weight: 400;
+        color: $purple;
+        margin-bottom: 20px
+    }
+    .category-content{
+        display: flex;
+    }
+}

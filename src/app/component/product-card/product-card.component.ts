@@ -23,10 +23,19 @@ export class ProductCardComponent implements OnInit {
 
   public productDetail = this.productsDetailList[0];
 
+  public productNameClass;
+
   constructor() { }
 
   ngOnInit() {
-    
+    this.associateClassBinding();
+  }
+
+  associateClassBinding(){
+    this.productNameClass = {
+      'name': true,
+      'out-of-stock': !this.productDetail.inStock
+    }
   }
 
 }

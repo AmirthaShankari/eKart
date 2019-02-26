@@ -1,4 +1,4 @@
-<div class="product">
+<div class="product" [class.out-of-stock] = "!productDetail.inStock">
   <div class="poster">
     <img
       [src]="productDetail.imageUrl"
@@ -6,6 +6,6 @@
   </div>
   <div class="details">
     <p class="brand">{{productDetail.brand}}</p>
-    <h4 class="name">{{productDetail.name}}</h4>
+    <h4 [ngClass]="productNameClass">{{productDetail.name}}</h4>
   </div>
 </div>

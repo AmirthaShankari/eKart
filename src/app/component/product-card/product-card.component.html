@@ -6,7 +6,7 @@
   </div>
   <div class="details">
     <p class="brand">
-      {{productDetail.brand}}
+      {{productDetail.brand | uppercase}}
     </p>
     <h4 [ngClass]="{'name': true, 'out-of-stock': !productDetail.inStock}">
       {{productDetail.name}}

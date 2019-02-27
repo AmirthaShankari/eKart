@@ -3,12 +3,13 @@
     <input type="text" name="searchProduct" [(ngModel)]="searchProduct" placeholder="Search Products..." />
     <div class="search-result" *ngIf="searchProduct">Showing results for "{{searchProduct}}"</div>
   </div>
-  <div class="category-section">
+  <div *ngIf="isServerError" class="error-message">Something went wrong!</div>
+  <div class="category-section" *ngFor="let categoryDetail of productsList">
     <div class="category-title">
-      Women
+      {{categoryDetail.category | titlecase }}
     </div>
     <div class="category-content">
-      <div class="product-separator" *ngFor="let product of productsList">
+      <div class="product-separator" *ngFor="let product of categoryDetail.products">
         <app-product-card [productDetail]="product" (productClickEmitter)="handleProductDetailNavigation($event)"></app-product-card>
       </div>
     </div>

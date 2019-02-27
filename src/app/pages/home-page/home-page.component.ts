@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PRODUCTSLIST } from '../../data/productsList';
-import { Product } from '../../models/Product';
+import { ProductCategory } from '../../models/ProductCategory';
+import { ProductsListService } from 'src/app/services/products-list.service';
 
 @Component({
   selector: 'app-home-page',
@@ -10,14 +10,19 @@ import { Product } from '../../models/Product';
 export class HomePageComponent implements OnInit {
 
   searchProduct: string;
-  productsList: Product[]; 
+  productsList: ProductCategory[]; 
+  isServerError: boolean;
 
-  constructor() {
+  constructor(private _productsListService : ProductsListService) {
 
   }
 
   ngOnInit() {
-    this.productsList = PRODUCTSLIST;
+    this._productsListService.fetchProductsList()
+      .subscribe(
+        (data) => { this.productsList = data },
+        (err) => { this.isServerError = true; console.log(err) }
+      )
   }
 
   handleProductDetailNavigation($event): void{

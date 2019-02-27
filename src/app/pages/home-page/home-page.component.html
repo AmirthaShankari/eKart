@@ -8,7 +8,9 @@
       Women
     </div>
     <div class="category-content">
-      <app-product-card></app-product-card>
+      <div class="product-separator" *ngFor="let product of productsList">
+        <app-product-card [productDetail]="product" (productClickEmitter)="handleProductDetailNavigation($event)"></app-product-card>
+      </div>
     </div>
   </div>
 </div>

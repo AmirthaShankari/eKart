@@ -1,4 +1,4 @@
-<div class="product" [class.out-of-stock] = "!productDetail.inStock" (click)="handleProductClick(productDetail)">
+<div class="product" *ngFor="let productDetail of productsDetailList" [class.out-of-stock] = "!productDetail.inStock" (click)="handleProductClick(productDetail)">
   <div class="poster">
     <img
       [src]="productDetail.imageUrl"

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../models/Product';
+import { PRODUCTSLIST } from '../../data/productsList';
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
@@ -7,7 +8,7 @@ import { Product } from '../../models/Product';
 })
 export class ProductCardComponent implements OnInit {
 
-  private productsDetailList: [Product] = [{
+  private productsDetailList: Product[] = [{
     _id: "5c2afa5bfb6fc00eee894150",
     name: "Blue Lehenga",
     inStock: false,
@@ -28,7 +29,8 @@ export class ProductCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.associateClassBinding();
+    this.productsDetailList = PRODUCTSLIST;
+    //this.associateClassBinding();
   }
 
   associateClassBinding(): void{

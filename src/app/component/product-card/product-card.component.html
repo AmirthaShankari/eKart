@@ -5,7 +5,11 @@
       alt="">
   </div>
   <div class="details">
-    <p class="brand">{{productDetail.brand}}</p>
-    <h4 [ngClass]="productNameClass">{{productDetail.name}}</h4>
+    <p class="brand">
+      {{productDetail.brand}}
+    </p>
+    <h4 [ngClass]="{'name': true, 'out-of-stock': !productDetail.inStock}">
+      {{productDetail.name}}
+    </h4>
   </div>
 </div>

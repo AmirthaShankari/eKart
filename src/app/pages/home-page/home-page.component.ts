@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCategory } from '../../models/ProductCategory';
 import { ProductsListService } from 'src/app/services/products-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +14,7 @@ export class HomePageComponent implements OnInit {
   productsList: ProductCategory[]; 
   isServerError: boolean;
 
-  constructor(private _productsListService : ProductsListService) {
+  constructor(private _productsListService : ProductsListService, private router: Router) {
 
   }
 
@@ -26,7 +27,7 @@ export class HomePageComponent implements OnInit {
   }
 
   handleProductDetailNavigation($event): void{
-    console.log("parent handler navigation invoked" + JSON.stringify($event));
+    this.router.navigate(['/product', $event._id]);
   }
 
 }

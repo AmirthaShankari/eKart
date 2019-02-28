@@ -18,7 +18,6 @@ export class ProductCardComponent implements OnInit {
   }
 
   handleProductClick(productDetail: Product): void{
-    alert(JSON.stringify(productDetail));
     this.productClickEmitter.emit(productDetail);
   }
 

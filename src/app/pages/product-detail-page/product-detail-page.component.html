@@ -1,0 +1,93 @@
+<div class="product-not-found" *ngIf="!isProductFound">
+  Product not found!
+</div>
+<div class="product-description" *ngIf="isProductFound">
+  <div class="content">
+    <div class="breadcrumbs">
+      <a routerLink="/home"> <img src="../../../assets/images/left-arrow.png" id="goBackImg" alt="img" /> <span>All
+          Products</span></a>
+    </div>
+    <div class="product-container">
+      <div class="product-img">
+        <img [src]="productDetail.imageUrl" alt="product image" />
+      </div>
+      <div class="product-details">
+        <p class="brand-title">{{ productDetail.brand | titlecase }}</p>
+        <p class="product-title">{{ productDetail.name | titlecase }}</p>
+        <p class="product-price">Rs. <span id="product-price">{{ productDetail.price }}</span></p>
+        <div class="product-desc-text">{{ productDetail.description }}</div>
+        <div class="prod-def-attributes">
+          <div class="prod-spec highlight">Size: <span class="default">{{ productDetail.size | uppercase }}</span></div>
+          <div class="prod-spec highlight">Color: <span class="default">{{ productDetail.color | titlecase }}</span></div>
+        </div>
+        <div class="btn-container">
+          <div class="cart-btn-container">
+            <button class="prod-btn add-to-cart-btn">Add to cart</button>
+          </div>
+          <div class="buy-btn-container">
+            <button class="prod-btn buy-now-btn">buy now</button>
+          </div>
+        </div>
+        <div class="prod-deliver highlight">Deliver to: <span class="prod-deliver default">600098</span></div>
+        <p class="bank-offer">Bank Offer: 5% Instant Discount on EMIs with Axis Bank Credit Card</p>
+        <p class="bank-offer">Bank Offer: Extra 5% off* with Axis Bank Buzz Credit Card</p>
+      </div>
+    </div>
+    <div class="reviews-container">
+      <p class="review-header">reviews and ratings</p>
+      <div class="review-wrapper">
+        <div class="reviewer">
+          <div class="review-user-name">
+            Kevin hart
+          </div>
+          <div class="user-ratings">
+            3.5 starts
+          </div>
+        </div>
+        <div class="review-description">
+          Only choli fabric is silk lahngaa and dupatta is net fabric
+        </div>
+      </div>
+      <div class="review-wrapper">
+        <div class="reviewer">
+          <div class="review-user-name">
+            Chitra Iyer
+          </div>
+          <div class="user-ratings">
+            4.5 starts
+          </div>
+        </div>
+        <div class="review-description">
+          Wonderful product with good quality cloth as per description
+        </div>
+      </div>
+      <div class="review-wrapper">
+        <div class="reviewer">
+          <div class="review-user-name">
+            Raj Agnihotri
+          </div>
+          <div class="user-ratings">
+            3.5 starts
+          </div>
+        </div>
+        <div class="review-description">
+          Only choli fabric is silk lahngaa and dupatta is net fabric
+        </div>
+      </div>
+      <div class="review-wrapper">
+        <div class="reviewer">
+          <div class="review-user-name">
+            Sameera
+          </div>
+          <div class="user-ratings">
+            4.5 starts
+          </div>
+        </div>
+        <div class="review-description">
+          Wonderful product with good quality cloth as per description
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

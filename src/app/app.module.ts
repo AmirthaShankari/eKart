@@ -12,6 +12,8 @@ import { ProductCardComponent } from './component/product-card/product-card.comp
 
 //Importing the services 
 import { ProductsListService } from './services/products-list.service';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProductsListService } from './services/products-list.service';
     FooterComponent,
     HomePageComponent,
     ProductCardComponent,
+    PageNotFoundComponent,
+    ProductDetailPageComponent,
   ],
   imports: [
     BrowserModule,
